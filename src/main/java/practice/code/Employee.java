@@ -5,10 +5,21 @@ public class Employee {
     private long salary;
     private String name;
 
-    public Employee(int empId, long salary, String name) {
+    private String dept;
+
+    public Employee(int empId, long salary, String name, String dept) {
         this.empId = empId;
         this.salary = salary;
         this.name = name;
+        this.dept = dept;
+    }
+
+    public String getDept() {
+        return dept;
+    }
+
+    public void setDept(String dept) {
+        this.dept = dept;
     }
 
     public int getEmpId() {
