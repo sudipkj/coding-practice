@@ -53,7 +53,6 @@ public class DeadLockExample {
         Shared s2 = new Shared();
         MyThread1 t1 = new MyThread1(s1, s2);
         t1.start();
-        Utils.joinThread(t1);
 
         MyThread2 t2 = new MyThread2(s1, s2);
         t2.start();
@@ -78,4 +77,5 @@ class Utils{
             throw new RuntimeException(e);
         }
     }
+
 }
