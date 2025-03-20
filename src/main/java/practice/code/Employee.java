@@ -1,5 +1,7 @@
 package practice.code;
 
+import java.util.Objects;
+
 public class Employee {
     private int empId;
     private long salary;
@@ -44,5 +46,16 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Employee employee)) return false;
+        return empId == employee.empId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(empId);
     }
 }
