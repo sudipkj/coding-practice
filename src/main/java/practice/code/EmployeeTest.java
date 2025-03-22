@@ -25,7 +25,7 @@ public class EmployeeTest {
 
         Map<String, List<Employee>> empmap = empList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.toList()));
 
-        System.out.println(empmap);
+        System.out.println("Output :: "+empmap);
 
 
 
