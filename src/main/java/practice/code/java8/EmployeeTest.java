@@ -6,14 +6,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static practice.code.java8.EmployeeUtils.getEmployees;
+
 public class EmployeeTest {
     public static void main(String[] args) {
         // Find employee with second-highest salary
 
-        List<Employee> empList = Arrays.asList(new Employee(4, 13000l, "Hero", "dev"),
-                new Employee(1, 12000l, "Sudip", "QA"),
-                new Employee(2, 15000l, "Rakesh", "QA"),
-                new Employee(3, 11500l, "Rohit", "dev"));
+        List<Employee> empList = getEmployees();
 
         Comparator<Employee> ct = Comparator.comparingLong(Employee::getSalary);
 
@@ -30,4 +29,5 @@ public class EmployeeTest {
 
 
     }
+
 }
