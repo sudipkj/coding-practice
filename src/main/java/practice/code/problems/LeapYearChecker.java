@@ -1,4 +1,4 @@
-package practice.code;
+package practice.code.problems;
 
 public class LeapYearChecker {
     public static void main(String[] args) {

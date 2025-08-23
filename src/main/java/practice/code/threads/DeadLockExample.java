@@ -1,4 +1,4 @@
-package practice.code;
+package practice.code.threads;
 
 class Shared {
 
@@ -26,6 +26,7 @@ class MyThread1 extends Thread{
 
     @Override
     public void run() {
+
         s1.test1(s2);
     }
 }

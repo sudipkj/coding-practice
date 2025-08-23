@@ -1,7 +1,4 @@
-package practice.code;
-
-import java.time.LocalDate;
-import java.util.LinkedList;
+package practice.code.linkedlists;
 
 public class CustomLinkedList<E> {
     Node<E> head;

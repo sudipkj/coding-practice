@@ -1,4 +1,4 @@
-package practice.code;
+package practice.code.threads;
 
 class Mythread1 extends Thread{
 

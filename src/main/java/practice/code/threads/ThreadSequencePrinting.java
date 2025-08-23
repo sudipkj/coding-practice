@@ -1,4 +1,4 @@
-package practice.code;
+package practice.code.threads;
 
 import java.util.stream.IntStream;
 

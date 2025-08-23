@@ -1,4 +1,4 @@
-package practice.code;
+package practice.code.problems;
 
 import java.util.Arrays;
 import java.util.HashMap;
