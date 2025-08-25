@@ -4,6 +4,14 @@ public class CustomLinkedList<E> {
     Node<E> head;
     Node<E> tail;
 
+    @Override
+    public String toString() {
+        return "CustomLinkedList{" +
+                "head=" + head +
+                ", tail=" + tail +
+                '}';
+    }
+
     static class Node<E>{
 
 
@@ -14,7 +22,7 @@ public class CustomLinkedList<E> {
 
         Node(E value){
             this.value = value;
-      ;  }
+        }
 
 
 
@@ -50,6 +58,7 @@ public class CustomLinkedList<E> {
 
         System.out.println("Head: " + list.head.value);
         System.out.println("Tail: " + list.tail.value);
+        System.out.println("list : " + list);
     }
 
     //code to generate palindrome word
