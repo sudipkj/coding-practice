@@ -9,6 +9,9 @@ public class Employee {
 
     private String dept;
 
+    public Employee() {
+    }
+
     public Employee(int empId, long salary, String name, String dept) {
         this.empId = empId;
         this.salary = salary;
