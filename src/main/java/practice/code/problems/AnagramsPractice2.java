@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class AnagramsPractice2 {
 
@@ -14,7 +15,7 @@ public class AnagramsPractice2 {
         Map<String, Integer> map = new HashMap<>();
         Integer count;
 
-        for(int i = 0 ; i<list.size(); i++){
+        /*for(int i = 0 ; i<list.size(); i++){
             String s = list.get(i);
             char[] chars  = s.toCharArray();
             Arrays.sort(chars);
@@ -26,9 +27,16 @@ public class AnagramsPractice2 {
             }else {
                 map.put(finalStr, 1);
             }
-        }
+        }*/
+        Map<String, Integer> anagramsMap = list.stream()
+                .collect(Collectors.groupingBy(
+                        s -> s.chars().sorted()
+                                .mapToObj(c -> String.valueOf((char) c))
+                                .collect(Collectors.joining()),
+                        Collectors.summingInt(e -> 1)
+                ));
 
-        System.out.println(map);
+        System.out.println(anagramsMap);
     }
 
 }

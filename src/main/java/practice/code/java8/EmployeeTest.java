@@ -1,9 +1,6 @@
 package practice.code.java8;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static practice.code.java8.EmployeeUtils.getEmployees;
@@ -26,7 +23,11 @@ public class EmployeeTest {
 
         System.out.println("Output :: "+empmap);
 
-
+        // Get max salary
+        OptionalLong maxSalary = empList.stream()
+                .mapToLong(Employee::getSalary)
+                .max();
+        Optional<Employee> e = empList.stream().sorted(ct1).skip(1).findFirst();
 
     }
 

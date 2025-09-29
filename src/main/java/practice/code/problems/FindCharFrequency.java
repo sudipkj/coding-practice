@@ -2,6 +2,7 @@ package practice.code.problems;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class FindCharFrequency {
 
@@ -10,20 +11,15 @@ public class FindCharFrequency {
         System.out.println(myMap);
     }
 
-    public static Map<Character, Integer>  getCharCount(String s){
-        char [] charArray = s.toCharArray();
-        Map<Character,Integer> charMap = new HashMap<>();
-        int count = 0;
-        for(int i =0; i < charArray.length; i++){
-            if(charMap.keySet().contains(charArray[i])){
-                count = charMap.get(charArray[i]);
-                count++;
-                charMap.put(charArray[i], count);
-            }else {
-                charMap.put(charArray[i], 1);
-            }
-        }
-
-        return charMap;
+    public static Map<Character, Integer> getCharCount(String s) {
+        return s.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(
+                        c -> c,
+                        Collectors.collectingAndThen(
+                                Collectors.counting(),
+                                Long::intValue
+                        )
+                ));
     }
 }

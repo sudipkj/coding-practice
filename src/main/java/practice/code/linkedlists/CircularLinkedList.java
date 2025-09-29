@@ -35,5 +35,19 @@ public class CircularLinkedList<E> {
         tail = node;
     }
 
+    /**
+     * Returns the node at the specified index (0-based), or null if index is out of bounds.
+     * Simpler for-loop version.
+     */
+    public Node<E> getNode(int index) {
+        if (head == null || index < 0) return null;
+        Node<E> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+            if (current == head) return null; // index out of bounds
+        }
+        return current;
+    }
+
 
 }

@@ -13,23 +13,13 @@ public class Anagrams {
         System.out.println(map);
     }
     public static Map<String, Integer> getAnagramCount(List<String> list){
-
         Map<String, Integer> map = new HashMap<>();
-        int count = 1;
         for(String s : list){
-            char [] charArray = s.toCharArray();
+            char[] charArray = s.toLowerCase().toCharArray();
             Arrays.sort(charArray);
             String sortedString = new String(charArray);
-            if(map.keySet().contains(sortedString)){
-                count = map.get(sortedString);
-                count ++;
-                map.put(sortedString, count);
-            }else {
-                map.put(sortedString, 1);
-            }
+            map.merge(sortedString, 1, Integer::sum);
         }
-
         return map;
-
     }
 }

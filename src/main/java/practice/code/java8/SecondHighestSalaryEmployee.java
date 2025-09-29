@@ -12,7 +12,7 @@ public class SecondHighestSalaryEmployee {
 
         //Sort
         Comparator<Employee> ct = (a, b) -> a.getSalary() > b.getSalary() ? -1 : a.getSalary() < b.getSalary() ? 1 : 0;
-        List<Employee> sortedList = empList.stream().sorted(ct).collect(Collectors.toList());
+        List<Employee> sortedList = empList.stream().sorted(ct).toList();
 
 
         //get second by skipping 1
