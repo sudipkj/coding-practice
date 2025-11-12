@@ -36,5 +36,6 @@ public enum SingletonExample {
 
         System.out.println(singleton.getConfigs("Test"));
 
+
     }
 }

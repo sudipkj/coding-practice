@@ -8,6 +8,15 @@ public class Employee {
     private String name;
 
     private String dept;
+    private String gender;
+
+    public Employee(int empId, long salary, String name, String dept, String gender) {
+        this.empId = empId;
+        this.salary = salary;
+        this.name = name;
+        this.dept = dept;
+        this.gender = gender;
+    }
 
     public Employee() {
     }
@@ -25,6 +34,14 @@ public class Employee {
 
     public void setDept(String dept) {
         this.dept = dept;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public int getEmpId() {

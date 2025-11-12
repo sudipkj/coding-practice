@@ -12,4 +12,12 @@ public class EmployeeUtils {
                 new Employee(3, 11500l, "Rohit", "dev"));
         return empList;
     }
+
+    public static List<Employee> getEmployeesList2() {
+        List<Employee> empList = Arrays.asList(new Employee(4, 13000l, "Hero", "dev","Male"),
+                new Employee(1, 12000l, "Sudip", "QA", "Male"),
+                new Employee(2, 15000l, "Rakesh", "QA", "female"),
+                new Employee(3, 11500l, "Rohit", "dev", "Male"));
+        return empList;
+    }
 }
