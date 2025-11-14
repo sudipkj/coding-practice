@@ -1,7 +1,7 @@
 package practice.nov.java8;
 
+import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static practice.nov.java8.EmployeeUtility.getAllEmployeeList;
@@ -22,7 +22,11 @@ public class LogicalStreams {
 
         // Show number of employees in Sales
         long numberOfEmpInSales = getAllEmployeeList().stream().filter(e-> e.getDeptName().equalsIgnoreCase("Sales")).count();
+        System.out.println("Show number of employees in Sales :: "+numberOfEmpInSales);
 
         // Show department wise employees
+        Map<String, List<Employee>> deptWiseEmployee = getAllEmployeeList().stream().collect(Collectors.groupingBy((Employee::getDeptName),
+                Collectors.toList()));
+        System.out.println("Show department wise employees :: "+deptWiseEmployee);
     }
 }
