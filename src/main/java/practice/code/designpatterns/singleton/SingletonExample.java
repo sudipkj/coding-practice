@@ -1,4 +1,7 @@
-package practice.code.designpatterns;
+package practice.code.designpatterns.singleton;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,20 +9,14 @@ import java.util.Map;
 public enum SingletonExample {
     INSTANCE;
 
+    @Setter
+    @Getter
     private int value;
-    private Map<String, String> configs;
+    private final Map<String, String> configs;
 
     SingletonExample() {
         configs = new HashMap<>();
         configs.put("Log", "my logs");
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
     }
 
     public String getConfigs(String key) {
