@@ -1,10 +1,10 @@
 package practice.code.designpatterns.decorator;
 
-public class AbstractDecorator implements Pizza{
+public class PizzaDecorator implements Pizza{
 
     private Pizza pizza;
 
-    AbstractDecorator(Pizza pizza){
+    PizzaDecorator(Pizza pizza){
         this.pizza = pizza;
     }
     @Override

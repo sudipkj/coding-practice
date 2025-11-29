@@ -1,6 +1,6 @@
 package practice.code.designpatterns.decorator;
 
-public class VegPizzaDecorator extends AbstractDecorator{
+public class VegPizzaDecorator extends PizzaDecorator {
 
     VegPizzaDecorator(Pizza pizza) {
         super(pizza);
