@@ -13,7 +13,7 @@ public class CollectorsPartitionBy {
         List<Employee> empList = EmployeeUtils.getEmployeesList2();
         Map<Boolean, List<Employee>> empPartition =
                 empList.stream().collect(Collectors.partitioningBy(emp -> emp.getGender().equalsIgnoreCase("Male")));
-
+        System.out.println(empPartition);
 
 
 
