@@ -3,7 +3,7 @@ package practice.nov.tricky;
 public class MaximumSubArrayWithWindow {
 
     public static void main(String[] args) {
-        int [] arr = {100, 200, 300, 400};
+        int [] arr = {100, 200, 300, 400, 544};
 
         int k = 2;
         int max = 0;
