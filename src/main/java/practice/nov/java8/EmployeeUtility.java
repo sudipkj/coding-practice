@@ -4,7 +4,7 @@ import java.util.List;
 
 public class EmployeeUtility {
 
-    protected static List<Employee> getAllEmployeeList(){
+    public static List<Employee> getAllEmployeeList(){
         List<Employee> employees = List.of(
                 new Employee("Sudip", "Kumar", new Address("Kolkata", "WB"), "IT", 50000),
                 new Employee("Amit", "Sharma", new Address("Delhi", "DL"), "HR", 45000),
