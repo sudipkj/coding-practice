@@ -1,4 +1,4 @@
-package practice.code.dec;
+package practice.dec;
 
 import lombok.NonNull;
 import practice.nov.java8.Employee;
@@ -35,7 +35,6 @@ public class EmployeeLambdaQuestions {
     }
 
 
-
     private static void getHighestSalary() {
         OptionalInt highestSalary = getAllEmployeeList().stream().mapToInt(Employee::getSalary).max();
         System.out.println(highestSalary);
@@ -48,7 +47,7 @@ public class EmployeeLambdaQuestions {
     }
 
     private static void totalEmployeesInSales() {
-        long total = getAllEmployeeList().stream().filter(e->e.getDeptName().equalsIgnoreCase("Sales")).count();
+        long total = getAllEmployeeList().stream().filter(e -> e.getDeptName().equalsIgnoreCase("Sales")).count();
         System.out.println(total);
     }
 
