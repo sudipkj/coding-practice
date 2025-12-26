@@ -11,7 +11,7 @@ public class MaximumSubarray {
         int[] array = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
         int max = array[0];
-        int[] subArray = new int[array.length];
+
         int start = 0, end = 0;
 
         for (int i = 0; i <= array.length; i++) {
