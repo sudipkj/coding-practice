@@ -13,9 +13,9 @@ public class SecondLargestNumberInArray {
                 slargest = largest;
                 largest= array[i];
             }
-            if(array[i]< largest && array[i]> slargest){
-                slargest = array[i];
-            }
+//            if(array[i]< largest && array[i]> slargest){
+//                slargest = array[i];
+//            }
             System.out.println("value of I " + array[i] + " Largest : " + largest + " slargest: " + slargest);
         }
         System.out.println("slargest number using optimal solution with O(n) " + slargest);
